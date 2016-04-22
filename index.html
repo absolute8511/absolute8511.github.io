@@ -5,7 +5,7 @@ description: "My Home"
 
 {% for post in paginator.posts %}
 <div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
+    <a href="{{ site.baseurl }}{{ post.url }}">
         <h2 class="post-title">            
             {{ post.title }}
         </h2>
