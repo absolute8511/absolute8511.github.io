@@ -1,7 +1,7 @@
 ---
 layout: post
-title: [原创]phpMyadmin连接 mysql问题总结
-date: 2008-9-3
+title: phpMyadmin连接 mysql问题总结
+date: 2008-09-03
 categories: tech
 tags: [mysql,php]
 ---
