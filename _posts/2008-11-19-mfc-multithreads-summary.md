@@ -1,4 +1,5 @@
 ---
+layout: post
 title: MFC中的多线程处理问题总结
 date: 2008-11-19
 categories: tech
