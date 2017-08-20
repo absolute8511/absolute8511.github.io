@@ -18,7 +18,7 @@
             <a class="tag" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
             {% endfor %}
         </div>
-        <h1 class="project-name">{{ page.title | default: site.github.repository_name }}</h1>
+        <h1 class="project-name">{{ page.title }}</h1>
         {% if page.subtitle %}
         <h2 class="project-tagline">{{ page.subtitle }}</h2>
         {% endif %}
@@ -27,6 +27,21 @@
 
     <section class="main-content">
       {{ content }}
+
+      <hr>
+
+      <ul class="pager">
+          {% if page.previous.url %}
+          <li class="previous">
+              <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+          </li>
+          {% endif %}
+          {% if page.next.url %}
+          <li class="next">
+              <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+          </li>
+          {% endif %}
+      </ul>
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
