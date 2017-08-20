@@ -13,8 +13,16 @@
   <body>
     {% include nav.html %}
     <section class="page-header">
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+        <div class="Tags">
+            {% for tag in page.tags %}
+            <a class="tag" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        <h1 class="project-name">{{ page.title | default: site.github.repository_name }}</h1>
+        {% if page.subtitle %}
+        <h2 class="project-tagline">{{ page.subtitle }}</h2>
+        {% endif %}
+        <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
     </section>
 
     <section class="main-content">
