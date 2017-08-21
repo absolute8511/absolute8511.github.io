@@ -3,7 +3,7 @@ layout: post
 title: test pages
 date: 2014-04-03
 categories: tech
-tags: [test,test]
+tags: [test]
 comment: True
 ---
 
