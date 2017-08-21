@@ -7,14 +7,15 @@
     <meta name="description" content="{{ page.title | default: site.description | default: site.github.project_tagline }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/monokai_sublime.min.css" rel="stylesheet"> 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css ">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css ">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/clean-blog.css">
     <!-- Pygments Github CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body ontouchstart="">
     {% include nav.html %}
@@ -76,14 +77,10 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
-
-
-
     <!-- Highlight.js -->
+    <script src="http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js"></script>
     <script>
-async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js",function(){
     hljs.initHighlightingOnLoad();
-})
     </script>
     <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
   </body>
