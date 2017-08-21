@@ -247,10 +247,6 @@ nav {
     margin-left: 3px;
 }
 
-.navbar {
-    display: none;
-}
-
 .navbar-fixed-bottom .dropdown .caret {
     content: "";
     border-top: 0;
