@@ -42,11 +42,11 @@ defaults:
 
 # Comments 
 comments :
-  provider : duoshuo
+  provider : disqus
   duoshuo :
     short_name : 
   disqus :
-      short_name : 
+      short_name : vincentlee
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: 

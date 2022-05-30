@@ -4,7 +4,7 @@ title: 如何设计一个支持高并发的高性能缓存库
 date: 2014-04-02
 categories: tech
 tags: [cache,multithread,performance]
-comment: True
+comments: true
 ---
 
 不考虑并发情况下的缓存的设计大家应该都比较清楚，基本上就是用map/hashmap存储键值，然后用双向链表记录一个LRU来用于缓存的清理。这篇文章应该是讲得很清楚 http://timday.bitbucket.org/lru.html 。但是考虑到高并发的情况，如何才能让缓存保持高性能呢？

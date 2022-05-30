@@ -4,7 +4,7 @@ title: test pages
 date: 2014-04-03
 categories: tech
 tags: [test]
-comment: True
+comments: true
 ---
 
 ## h2
