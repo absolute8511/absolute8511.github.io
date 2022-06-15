@@ -66,12 +66,12 @@ Golang前期的优化主要集中在 调度器, 内存分配器, GC, 定时器, 
 ### 1.3
 
 - 内存模型变更: 确保channel符合新的内存模型, a buffered channel can be used as a simple semaphore, using a send into the channel to acquire and a receive from the channel to release.
-- goroutine栈实现从分段模型(segment stack)改成连续模型(contiguous segment). 消除了“hot split”的问题 (https://medium.com/a-journey-with-go/go-how-does-the-goroutine-stack-size-evolve-447fc02085e5)
+- goroutine栈实现从分段模型(segment stack)改成连续模型(contiguous segment). 消除了“hot split”的问题 ( https://medium.com/a-journey-with-go/go-how-does-the-goroutine-stack-size-evolve-447fc02085e5 )
 - 运行时基于只有指针类型的值包含指针的假设增加了对栈内存的精确扫描支持，实现了真正精确的垃圾收集
 - GC: 使用并发sweep算法优化, better parallelization, and larger pages. (50-70% reduction in collector pause time)
 - 优化regexp实现
 - 默认开启TCP keep-alives
-- 支持sync.pool ( https://medium.com/a-journey-with-go/go-understand-the-design-of-sync-pool-2dde3024e277 )
+- 支持sync.pool (参考 https://medium.com/a-journey-with-go/go-understand-the-design-of-sync-pool-2dde3024e277 )
 
 ### 1.4
 
