@@ -11,6 +11,8 @@ comments: true
 
 随着Go生态越来越丰富，和云原生的发展相辅相成，未来发展前景无限。
 
+转载请注明来源：[Go 历史](http://absolute8511.github.io/tech/2022/06/15/go-history/）
+
 ## Go创始作者
 
 - Ken Thompson (Unix, C语言, Plan9， Bell Lab)
