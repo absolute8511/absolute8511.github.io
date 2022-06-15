@@ -20,7 +20,7 @@ github_username:
 # Build settings  
 # use Github Flavored Markdown !important  
 # document: http://jekyllrb.com/docs/configuration/#kramdown  
-markdown: CommonMarkGhPages
+markdown: GFM
 
 kramdown:
   input: GFM
