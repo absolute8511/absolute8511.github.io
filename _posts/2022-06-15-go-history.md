@@ -207,12 +207,12 @@ if(2>1){y1=1;}else{y2=1;}经过死代码删除后变为y1=1
 
 ### 参考资料
 
-https://www.luozhiyun.com/archives/458
-https://golang.design/under-the-hood/zh-cn/part2runtime/ch08gc/history/
-https://draveness.me/golang/
-https://go.dev/doc/devel/release
-https://medium.com/a-journey-with-go/go-retrospective-b9723352e9b0
-https://go.googlesource.com/proposal/+/master/design/
+- https://www.luozhiyun.com/archives/458
+- https://golang.design/under-the-hood/zh-cn/part2runtime/ch08gc/history/
+- https://draveness.me/golang/
+- https://go.dev/doc/devel/release
+- https://medium.com/a-journey-with-go/go-retrospective-b9723352e9b0
+- https://go.googlesource.com/proposal/+/master/design/
 
 ## Go代码常用优化手段
 
@@ -240,4 +240,6 @@ https://go.googlesource.com/proposal/+/master/design/
 - Libraries, semantic versioning, proactively identify and report vulnerable packages to users
 - Pike and Thompson 已退休(被google尊养), Russ Cox为目前Go团队的新leader(MIT博士毕业加入go团队), Ian Lance Taylor
 
-参考: https://cacm.acm.org/magazines/2022/5/260357-the-go-programming-language-and-environment/fulltext
+参考: [https://cacm.acm.org/magazines/2022/5/260357-the-go-programming-language-and-environment/fulltext][260357-the-go-programming-language-and-environment]
+
+[260357-the-go-programming-language-and-environment]: https://cacm.acm.org/magazines/2022/5/260357-the-go-programming-language-and-environment/fulltext 
