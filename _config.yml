@@ -21,6 +21,10 @@ github_username:
 # use Github Flavored Markdown !important  
 # document: http://jekyllrb.com/docs/configuration/#kramdown  
 markdown: kramdown
+
+kramdown:
+  input: GFM
+
 highlighter: rouge
 permalink: pretty
 paginate: 8
