@@ -71,7 +71,7 @@ Golang前期的优化主要集中在 调度器, 内存分配器, GC, 定时器, 
 - GC: 使用并发sweep算法优化, better parallelization, and larger pages. (50-70% reduction in collector pause time)
 - 优化regexp实现
 - 默认开启TCP keep-alives
-- 支持sync.pool (https://medium.com/a-journey-with-go/go-understand-the-design-of-sync-pool-2dde3024e277)
+- 支持sync.pool ( https://medium.com/a-journey-with-go/go-understand-the-design-of-sync-pool-2dde3024e277 )
 
 ### 1.4
 
