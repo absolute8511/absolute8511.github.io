@@ -54,7 +54,7 @@ Golang前期的优化主要集中在 调度器, 内存分配器, GC, 定时器, 
 - 优化maps实现 (significant reduction in memory footprint and CPU time)
 - 允许更大的heap size (from 1.1， 到1.10都是线性内存空间)
 - 优化并行GC
-- 更好的调度算法实现, 经典的work-stealing算法( https://docs.google.com/document/d/1TTj4T2JO42uD5ID9e89oa0sLKhJYD0Y_kqxDv3I3XMw/edit, https://rakyll.org/scheduler/)
+- 更好的调度算法实现, 经典的work-stealing算法( <https://docs.google.com/document/d/1TTj4T2JO42uD5ID9e89oa0sLKhJYD0Y_kqxDv3I3XMw/edit> , <https://rakyll.org/scheduler/> )
 
 ### 1.2
 
@@ -207,12 +207,12 @@ if(2>1){y1=1;}else{y2=1;}经过死代码删除后变为y1=1
 
 ### 参考资料
 
-- https://www.luozhiyun.com/archives/458
-- https://golang.design/under-the-hood/zh-cn/part2runtime/ch08gc/history/
-- https://draveness.me/golang/
-- https://go.dev/doc/devel/release
-- https://medium.com/a-journey-with-go/go-retrospective-b9723352e9b0
-- https://go.googlesource.com/proposal/+/master/design/
+- [https://www.luozhiyun.com/archives/458]
+- [https://golang.design/under-the-hood/zh-cn/part2runtime/ch08gc/history/]
+- [https://draveness.me/golang/]
+- [https://go.dev/doc/devel/release]
+- [https://medium.com/a-journey-with-go/go-retrospective-b9723352e9b0]
+- [https://go.googlesource.com/proposal/+/master/design/]
 
 ## Go代码常用优化手段
 
@@ -243,3 +243,9 @@ if(2>1){y1=1;}else{y2=1;}经过死代码删除后变为y1=1
 参考: [https://cacm.acm.org/magazines/2022/5/260357-the-go-programming-language-and-environment/fulltext][260357-the-go-programming-language-and-environment]
 
 [260357-the-go-programming-language-and-environment]: https://cacm.acm.org/magazines/2022/5/260357-the-go-programming-language-and-environment/fulltext 
+[https://www.luozhiyun.com/archives/458]: https://www.luozhiyun.com/archives/458
+[https://golang.design/under-the-hood/zh-cn/part2runtime/ch08gc/history/]: https://golang.design/under-the-hood/zh-cn/part2runtime/ch08gc/history/
+[https://draveness.me/golang/]: https://draveness.me/golang/
+[https://go.dev/doc/devel/release]: https://go.dev/doc/devel/release
+[https://medium.com/a-journey-with-go/go-retrospective-b9723352e9b0]: https://medium.com/a-journey-with-go/go-retrospective-b9723352e9b0
+[https://go.googlesource.com/proposal/+/master/design/]: https://go.googlesource.com/proposal/+/master/design/
