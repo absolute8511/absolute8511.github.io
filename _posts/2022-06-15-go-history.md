@@ -107,7 +107,7 @@ Golang前期的优化主要集中在 调度器, 内存分配器, GC, 定时器, 
 
 ### 1.8
 
-- 优化GC暂停时间, 使用混合写屏障，消除栈重新扫描带来的stw (https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md)为了移除栈的重扫描过程，除了引入混合写屏障之外，在垃圾收集的标记阶段，我们还需要将创建的所有新对象都标记成黑色，防止新分配的栈内存和堆内存中的对象被错误地回收，因为栈内存在标记阶段最终都会变为黑色，所以不再需要重新扫描栈空间。
+- 优化GC暂停时间, 使用混合写屏障，消除栈重新扫描带来的stw (参考 https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md), 为了移除栈的重扫描过程，除了引入混合写屏障之外，在垃圾收集的标记阶段，我们还需要将创建的所有新对象都标记成黑色，防止新分配的栈内存和堆内存中的对象被错误地回收，因为栈内存在标记阶段最终都会变为黑色，所以不再需要重新扫描栈空间。
 - 所有架构启用SSA (generates more compact, more efficient code and provides a better platform for optimizations such as bounds check elimination. The new back end reduces the CPU time required by our benchmark programs by 20-30% on 32-bit ARM systems.) 借助SSA IR，编译器则可以通过查找赋值了但是没有使用的变量，来识别冗余赋值。其他可做的优化包括常量折叠（constant folding）、常量传播（constant propagation）、强度削减（strength reduction）以及死代码删除（dead code elimination）等
 ```
 x1=4*1024经过常量折叠后变为x1=4096
@@ -197,13 +197,11 @@ if(2>1){y1=1;}else{y2=1;}经过死代码删除后变为y1=1
 
 ### unreleased
 
-- https://github.com/golang/go/commit/d8cf2243e0ed1c498ed405432c10f9596815a582
+- 减少gc goroutine在空闲时对cpu的占用, 参考 https://github.com/golang/go/commit/d8cf2243e0ed1c498ed405432c10f9596815a582
 - goroutine初始栈会根据历史平均来确定, 总体会更少浪费了。
 - 编译器使用jump table重新实现了针对大整型数和string类型的switch语句，平均性能提升20%左右。
-- 减少gc goroutine在空闲时对os的占用
 - runtime.SetMemoryLimit限制内存上限, 从而更积极的归还内存
 - 修订Go memory model描述, 做了更正式的整体描述，增加了对multiword竞态、runtime.SetFinalizer、更多sync类型、atomic操作以及编译器优化方面的描述(https://go.dev/ref/mem)
-- GC Pacer Redesign https://go.googlesource.com/proposal/+/master/design/44167-gc-pacer-redesign.md
 
 ### 参考资料
 
